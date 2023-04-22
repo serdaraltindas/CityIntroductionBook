@@ -14,6 +14,7 @@
 		AECF1A7329F459060008179D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AECF1A7229F459060008179D /* Assets.xcassets */; };
 		AECF1A7629F459060008179D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECF1A7429F459060008179D /* LaunchScreen.storyboard */; };
 		AECF1A7E29F459C50008179D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF1A7D29F459C50008179D /* DetailsViewController.swift */; };
+		AECF1A8029F45DF00008179D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF1A7F29F45DF00008179D /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AECF1A7529F459060008179D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AECF1A7729F459060008179D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AECF1A7D29F459C50008179D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		AECF1A7F29F45DF00008179D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				AECF1A6B29F459050008179D /* SceneDelegate.swift */,
 				AECF1A6D29F459050008179D /* ViewController.swift */,
 				AECF1A7D29F459C50008179D /* DetailsViewController.swift */,
+				AECF1A7F29F45DF00008179D /* Model.swift */,
 				AECF1A6F29F459050008179D /* Main.storyboard */,
 				AECF1A7229F459060008179D /* Assets.xcassets */,
 				AECF1A7429F459060008179D /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AECF1A8029F45DF00008179D /* Model.swift in Sources */,
 				AECF1A6E29F459050008179D /* ViewController.swift in Sources */,
 				AECF1A6A29F459050008179D /* AppDelegate.swift in Sources */,
 				AECF1A6C29F459050008179D /* SceneDelegate.swift in Sources */,
