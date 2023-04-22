@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    
+    //city
     var city = [City]()
     var userSelected : City?
     override func viewDidLoad() {
