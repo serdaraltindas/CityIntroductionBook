@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     var city = [City]()
-    
+    var userSelected : City?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,14 +39,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        userSelected = city[indexPath.row]
         performSegue(withIdentifier: "toDetailsVC", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //
         if segue.identifier == "toDetailsVC" {
             let destinationVC = segue.destination as! DetailsViewController
-            destinationVC.secilenKahramanIsmi = secilenIsim
-            destinationVC.secilenKahramanGorselIsmi = secilenGorselIsmi
+            destinationVC.selectedCity = userSelected
         }
     }
 }
