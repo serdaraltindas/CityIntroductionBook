@@ -8,10 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
- 
+    
     @IBOutlet weak var tableView: UITableView!
     
-    let city : [String] = []
+    var city = [City]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let city3 = City(isim: "Diyarbakır", bolge: "Doğu Anadolu", gorsel: UIImage(named: "sehir1")!)
         let city4 = City(isim: "Sinop", bolge: "Karadeniz", gorsel: UIImage(named: "sehir2")!)
         let city5 = City(isim: "Ankara", bolge: "İç Anadolu", gorsel: UIImage(named: "sehir1")!)
-        let city = [city1,city2,city3,city4,city5]
         
+        city = [city1,city2,city3,city4,city5]
         
     }
     
@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = city[indexPath.row]
+        cell.textLabel?.text = city[indexPath.row].isim
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -43,6 +43,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //
+        if segue.identifier == "toDetailsVC" {
+            let destinationVC = segue.destination as! DetailsViewController
+            destinationVC.secilenKahramanIsmi = secilenIsim
+            destinationVC.secilenKahramanGorselIsmi = secilenGorselIsmi
+        }
     }
 }
 
